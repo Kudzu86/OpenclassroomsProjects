@@ -124,7 +124,7 @@ def get_book_info(soup, product_page_url):
         if not image_url_element:
             print("URL de l'image non trouvée pour:", product_page_url)
             return None
-        image_url = base_url + image_url_element["src"].replace('../', '')
+        image_url = base_url[:-10] + image_url_element["src"].replace('../', '')
         print("URL de l'image:", image_url)  
 
         return {
