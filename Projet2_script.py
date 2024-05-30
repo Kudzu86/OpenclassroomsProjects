@@ -29,6 +29,7 @@ def get_all_mystery_books(base_url):
             soup = BeautifulSoup(response.text, features="html.parser")
             
             # Boucle for pour trouver tous les éléments h3 et extraire l'url de la balise a href
+            """links = [base_url + h3.find("a")["href"][9:] for h3 in soup.find_all("h3")]"""
             for h3 in soup.find_all("h3"):
                 href = h3.find("a")["href"][9:]
                 product_page_url = base_url + href
