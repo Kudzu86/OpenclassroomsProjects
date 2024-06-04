@@ -17,6 +17,7 @@ Clonez ce dépôt sur votre machine locale :
 
 ```
 Copier le code
+
 git clone https://github.com/Kudzu86/OpenclassroomsProjects.git
 cd OpenclassroomsProjects/Projet2
 ```
@@ -25,6 +26,7 @@ Activez votre environnement virtuel et installez les dépendances :
 
 ```
 Copier le code
+
 python -m venv .venv
 source .venv/bin/activate # Sur Windows, utilisez `.venv\Scripts\activate`
 pip install -r requirements.txt
@@ -37,7 +39,9 @@ Pour exécuter le scraper, lancez simplement le script scraper.py :
 
 ```
 Copier le code
+
 python scraper.py
+
 Le script téléchargera les informations de chaque livre et les enregistrera dans des fichiers CSV dans un dossier Books, avec chaque catégorie de livre ayant son propre sous-dossier.
 ```
 
@@ -45,7 +49,9 @@ Le script téléchargera les informations de chaque livre et les enregistrera da
 ### Structure du Projet
 
 scraper.py : Le script principal contenant le scraper.
+
 requirements.txt : Liste des dépendances nécessaires pour exécuter le projet.
+
 Books/ : Dossier où les fichiers CSV et les images de couverture des livres seront enregistrés.
 
 
