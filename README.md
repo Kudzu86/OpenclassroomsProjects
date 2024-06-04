@@ -60,7 +60,9 @@ Le script téléchargera les informations de chaque livre et les enregistrera da
 
 
 scraper.py : Le script principal contenant le scraper.
+
 requirements.txt : Liste des dépendances nécessaires pour exécuter le projet.
+
 Books/ : Dossier où les fichiers CSV et les images de couverture des livres seront enregistrés.
 
 
