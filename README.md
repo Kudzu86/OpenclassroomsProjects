@@ -8,10 +8,10 @@ Ce projet est un web scraper écrit en Python pour extraire des informations sur
 ## Prérequis
 
 
-Avant de pouvoir exécuter ce projet, assurez-vous d'avoir installé Python et les dépendances nécessaires. Vous pouvez installer les dépendances en utilisant le fichier `requirements.txt`.
+Avant de pouvoir exécuter ce projet, assurez-vous d'avoir installé Python. Vous pouvez vérifier que le logiciel est bien installé en écrivant simplement "python" dans la console ou "python --version".
 
 ```
-pip install -r requirements.txt
+python --version
 ```
 
 
