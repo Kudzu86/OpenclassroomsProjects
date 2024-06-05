@@ -142,5 +142,4 @@ def create_csv_file(csv_filename, all_books_url, category_directory):
 
     
     
-
 get_all_books(base_url)
