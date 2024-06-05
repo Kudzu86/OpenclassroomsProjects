@@ -65,7 +65,9 @@ Books/ : Dossier où les fichiers CSV et les images de couverture des livres ser
 
 
 Extraction des livres par catégorie : Récupère tous les liens des livres pour chaque catégorie du site.
+
 Extraction des détails des livres : Récupère les informations détaillées pour chaque livre et télécharge l'image de la couverture.
+
 Enregistrement dans des fichiers CSV : Crée des fichiers CSV pour chaque catégorie avec les informations des livres.
 
 
