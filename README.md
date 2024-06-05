@@ -22,8 +22,6 @@ pip install -r requirements.txt
 Clonez ce dépôt sur votre machine locale :
 
 ```
-Copier le code
-
 git clone https://github.com/Kudzu86/OpenclassroomsProjects.git
 cd OpenclassroomsProjects/Projet2
 ```
@@ -31,8 +29,6 @@ cd OpenclassroomsProjects/Projet2
 Activez votre environnement virtuel et installez les dépendances :
 
 ```
-Copier le code
-
 python -m venv .venv
 source .venv/bin/activate # Sur Windows, utilisez `.venv\Scripts\activate`
 pip install -r requirements.txt
@@ -46,8 +42,6 @@ pip install -r requirements.txt
 Pour exécuter le scraper, lancez simplement le script scraper.py :
 
 ```
-Copier le code
-
 python scraper.py
 ```
 
@@ -73,6 +67,22 @@ Books/ : Dossier où les fichiers CSV et les images de couverture des livres ser
 Extraction des livres par catégorie : Récupère tous les liens des livres pour chaque catégorie du site.
 Extraction des détails des livres : Récupère les informations détaillées pour chaque livre et télécharge l'image de la couverture.
 Enregistrement dans des fichiers CSV : Crée des fichiers CSV pour chaque catégorie avec les informations des livres.
+
+
+
+### Exclusion de l'environnement virtuel et des données extraites
+
+
+Pour vous assurer que l'environnement virtuel et les données extraites ne sont pas stockés dans le repository, ajoutez les répertoires pertinents au fichier .gitignore :
+
+```
+# Environnement virtuel
+.venv/
+
+# Données extraites
+*.csv
+Books/
+```
 
 
 
