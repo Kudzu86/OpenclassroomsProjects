@@ -23,7 +23,7 @@ Clonez ce dépôt sur votre machine locale :
 
 ```
 git clone https://github.com/Kudzu86/OpenclassroomsProjects.git
-cd OpenclassroomsProjects/tree/master
+cd OpenclassroomsProjects
 ```
 
 Activez votre environnement virtuel et installez les dépendances :
