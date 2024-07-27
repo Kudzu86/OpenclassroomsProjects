@@ -1,0 +1,58 @@
+[
+    {
+        "nom": "Contresoncamp",
+        "prenom": "Marc",
+        "date_naissance": "12/08/1957",
+        "id_joueur": "TR87451",
+        "points": 0
+    },
+    {
+        "nom": "Beauvais",
+        "prenom": "Jos\u00e9",
+        "date_naissance": "21/06/1939",
+        "id_joueur": "TR74121",
+        "points": 1.5
+    },
+    {
+        "nom": "Merguez",
+        "prenom": "Rosalita",
+        "date_naissance": "01/07/1978",
+        "id_joueur": "TR47814",
+        "points": 3.5
+    },
+    {
+        "nom": "Zidane",
+        "prenom": "Zinedine",
+        "date_naissance": "17/04/1977",
+        "id_joueur": "TR78514",
+        "points": 3.0
+    },
+    {
+        "nom": "Daho",
+        "prenom": "Etienne",
+        "date_naissance": "14/10/1970",
+        "id_joueur": "TR12154",
+        "points": 1.0
+    },
+    {
+        "nom": "Archibald",
+        "prenom": "John Q.",
+        "date_naissance": "14/02/1962",
+        "id_joueur": "TR87478",
+        "points": 0
+    },
+    {
+        "nom": "Wick",
+        "prenom": "John",
+        "date_naissance": "01/01/1977",
+        "id_joueur": "TR87851",
+        "points": 2
+    },
+    {
+        "nom": "Astier",
+        "prenom": "Alexandre",
+        "date_naissance": "11/11/1971",
+        "id_joueur": "TR45478",
+        "points": 0
+    }
+]

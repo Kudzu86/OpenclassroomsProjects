@@ -1,0 +1,128 @@
+[
+    {
+        "nom_tournoi": "Paplard cup",
+        "lieu": "Tourtirac",
+        "date_debut": "21/06/2024",
+        "date_fin": "23/06/2024",
+        "id_tournoi": "TN14781",
+        "tours": [
+            {
+                "nom": "Tour 1",
+                "matchs": [
+                    {
+                        "joueur1": "TR74121",
+                        "joueur2": "TR47814",
+                        "joueur1_score": 0.5,
+                        "joueur2_score": 0.5
+                    },
+                    {
+                        "joueur1": "TR78514",
+                        "joueur2": "TR12154",
+                        "joueur1_score": 1.0,
+                        "joueur2_score": 0.0
+                    },
+                    {
+                        "joueur1": "TR87478",
+                        "joueur2": "TR87851",
+                        "joueur1_score": 0.0,
+                        "joueur2_score": 1.0
+                    }
+                ],
+                "joueur_exempt": null
+            }
+        ],
+        "participants": [
+            "TR87451",
+            "TR74121",
+            "TR47814",
+            "TR78514",
+            "TR12154",
+            "TR87478",
+            "TR87851"
+        ],
+        "joueur_exempt": null
+    },
+    {
+        "nom_tournoi": "Kasparov",
+        "lieu": "Trouducity",
+        "date_debut": "28/08/2024",
+        "date_fin": "29/08/2024",
+        "id_tournoi": "TN45457",
+        "tours": [
+            {
+                "nom": "Tour 1",
+                "matchs": [
+                    {
+                        "joueur1": "TR47814",
+                        "joueur2": "TR87451",
+                        "joueur1_score": 1.0,
+                        "joueur2_score": 0.0
+                    },
+                    {
+                        "joueur1": "TR78514",
+                        "joueur2": "TR12154",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    }
+                ],
+                "joueur_exempt": null
+            },
+            {
+                "nom": "Tour 2",
+                "matchs": [
+                    {
+                        "joueur1": "TR74121",
+                        "joueur2": "TR47814",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    },
+                    {
+                        "joueur1": "TR78514",
+                        "joueur2": "TR12154",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    }
+                ],
+                "joueur_exempt": null
+            },
+            {
+                "nom": "Tour 3",
+                "matchs": [
+                    {
+                        "joueur1": "TR78514",
+                        "joueur2": "TR74121",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    },
+                    {
+                        "joueur1": "TR12154",
+                        "joueur2": "TR87451",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    }
+                ],
+                "joueur_exempt": "TR47814"
+            },
+            {
+                "nom": "Tour 4",
+                "matchs": [
+                    {
+                        "joueur1": "TR47814",
+                        "joueur2": "TR74121",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    }
+                ],
+                "joueur_exempt": "TR78514"
+            }
+        ],
+        "participants": [
+            "TR87451",
+            "TR74121",
+            "TR47814",
+            "TR78514",
+            "TR12154"
+        ],
+        "joueur_exempt": null
+    }
+]
