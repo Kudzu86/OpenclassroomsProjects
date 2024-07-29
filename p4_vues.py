@@ -151,25 +151,6 @@ class View:
             return View.prompt_joueur()
         
 
-    @staticmethod
-    def create_matchs_and_tours(db):
-        tournois = db.tournois
-        if not tournois:
-            print("Aucun tournoi disponible. Ajoutez d'abord un tournoi.")
-            return
-
-        print("Sélectionner un tournoi pour générer les matchs et tours:")
-        for i, tournoi in enumerate(tournois):
-            print(f"{i + 1}. {tournoi.nom_tournoi} à {tournoi.lieu}, du {tournoi.date_debut.strftime('%d/%m/%Y')} au {tournoi.date_fin.strftime('%d/%m/%Y')}")
-
-        choix = int(input("Choix: ")) - 1
-        if 0 <= choix < len(tournois):
-            tournoi = tournois[choix]
-            tournoi.generer_matchs_et_tours(db)
-            print(f"Matchs et tours créés pour le tournoi {tournoi.nom_tournoi} !")
-            db.save()
-        else:
-            print("Choix invalide. Veuillez réessayer.")
 
 
     @staticmethod
@@ -190,9 +171,10 @@ class View:
                 joueur1 = match.joueur1
                 joueur2 = match.joueur2
                 print(f"  Match {tour.matchs.index(match) + 1}: {joueur1.prenom} {joueur1.nom} ({joueur1.id_joueur})   vs   ({joueur2.id_joueur}) {joueur2.prenom} {joueur2.nom}")
-                if hasattr(match, 'resultat') and match.resultat:
-                    print(f"    Résultat: {match.resultat} \n\n")
-                    print(f"Joueur exempt : {tour.joueur_exempt}")
+                resultat = getattr(match, 'resultat', "0 - 0")
+                if resultat != "0 - 0":
+                    print(f"    Résultat: {resultat} \n")
+                    print(f"Joueur exempt : {tour.joueur_exempt}\n\n")
                 else:
                     print("    Résultat: En attente \n\n")
 

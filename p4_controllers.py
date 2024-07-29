@@ -127,8 +127,7 @@ class ApplicationController:
     def generer_matchs_et_tours(self):
         tournoi = self.view.prompt_selection_tournoi(self.db.tournois)
         if tournoi:
-            tournoi.generer_un_tour(self.db)
-            print(f"\nMatchs et tours générés pour le tournoi {tournoi.nom_tournoi}.\n")
+            tournoi.generer_un_tour(self.db)           
             self.db.save()
         else:
             print("Aucun tournoi sélectionné.")

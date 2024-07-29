@@ -166,23 +166,26 @@ class Tournoi:
         participants.sort(key=lambda joueur: joueur.points, reverse=True)
         return participants
     
-    def ajouter_tour(self, tour):
-        if isinstance(tour, Tour):
-            self.tours.append(tour)
-            print(f"Tour ajouté : {tour}")
-            self.save()
-        else:
-            print(f"Erreur : L'objet ajouté n'est pas un Tour.")
 
+    def tous_les_resultats_sont_remplis(self):
+        for tour in self.tours:
+            for match in tour.matchs:
+                if match.resultat == "0 - 0":
+                    return False
+        return True
 
     def generer_un_tour(self, db):
 
         if len(self.tours) >= 4:
-            print("Le tournoi a déjà 4 tours. Aucun nouveau tour ne peut être créé.")
+            print("\nLe tournoi a déjà 4 tours. Aucun nouveau tour ne peut être créé.")
             return
 
         if len(self.participants) < 2:
-            print("Pas assez de participants pour générer un match")
+            print("\nPas assez de participants pour générer un match")
+            return
+        
+        if not self.tous_les_resultats_sont_remplis():
+            print("\nTous les résultats des matchs précédents doivent être entrés avant de générer un nouveau tour.")
             return
         
         joueurs = self.trier_participants(db)

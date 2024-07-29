@@ -29,6 +29,54 @@
                     }
                 ],
                 "joueur_exempt": null
+            },
+            {
+                "nom": "Tour 2",
+                "matchs": [
+                    {
+                        "joueur1": "TR47814",
+                        "joueur2": "TR74121",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    },
+                    {
+                        "joueur1": "TR12154",
+                        "joueur2": "TR87851",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    },
+                    {
+                        "joueur1": "TR87451",
+                        "joueur2": "TR87478",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    }
+                ],
+                "joueur_exempt": null
+            },
+            {
+                "nom": "Tour 3",
+                "matchs": [
+                    {
+                        "joueur1": "TR78514",
+                        "joueur2": "TR74121",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    },
+                    {
+                        "joueur1": "TR12154",
+                        "joueur2": "TR87451",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    },
+                    {
+                        "joueur1": "TR87851",
+                        "joueur2": "TR87478",
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
+                    }
+                ],
+                "joueur_exempt": null
             }
         ],
         "participants": [
@@ -101,7 +149,7 @@
                         "joueur2_score": 0
                     }
                 ],
-                "joueur_exempt": "TR47814"
+                "joueur_exempt": null
             },
             {
                 "nom": "Tour 4",
@@ -113,7 +161,7 @@
                         "joueur2_score": 0
                     }
                 ],
-                "joueur_exempt": "TR78514"
+                "joueur_exempt": null
             }
         ],
         "participants": [
