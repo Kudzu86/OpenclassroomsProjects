@@ -182,19 +182,33 @@ class ApplicationController:
             print("Match non trouvé.")
             return
 
+        joueur1_score = None
+        joueur2_score = None
+
         print(f"Match sélectionné : {match.joueur1.prenom} {match.joueur1.nom} vs {match.joueur2.prenom} {match.joueur2.nom}")
 
         while True:
             try:
-                joueur1_score = float(input(f"Entrez le score pour {match.joueur1.prenom} {match.joueur1.nom} (0, 0.5, 1): "))
+                joueur1_input = input(f"Entrez le score pour {match.joueur1.prenom} {match.joueur1.nom} (0, 0.5, 1 ou # pour annuler le match): ")
+            
+                if joueur1_input == "#":
+                    match.resultat = "Annulé"
+                    joueur1_score = None
+                    joueur2_score = None
+                    break
+
+                joueur1_score = float(joueur1_input)
                 if joueur1_score not in [0, 0.5, 1]:
-                    raise ValueError("Le score doit être 0, 0.5 ou 1.")
+                    raise ValueError("Le score doit être 0, 0.5 ou 1. (# pour annuler le match)")
                 joueur2_score = 1 - joueur1_score
                 break
+
+                
             except ValueError as e:
                 print(f"Entrée invalide : {e}. Veuillez entrer un score valide.")
 
-        match.set_scores(joueur1_score, joueur2_score)
+        if joueur1_score is not None and joueur2_score is not None:
+            match.set_scores(joueur1_score, joueur2_score)
         print(f"Résultats mis à jour pour le match {match_num}.")
 
 

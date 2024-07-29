@@ -158,7 +158,7 @@ class View:
         print(f"\n--- Tournoi: {tournoi.nom_tournoi} --- \n")
         tournoi.classement_tournoi()
         if not tournoi.tours:
-            print("Aucun tour disponible.")
+            print("\nAucun tour disponible.\n")
             return
         
         for index, tour in enumerate(tournoi.tours, start=1):
@@ -172,12 +172,13 @@ class View:
                 joueur2 = match.joueur2
                 print(f"  Match {tour.matchs.index(match) + 1}: {joueur1.prenom} {joueur1.nom} ({joueur1.id_joueur})   vs   ({joueur2.id_joueur}) {joueur2.prenom} {joueur2.nom}")
                 resultat = getattr(match, 'resultat', "0 - 0")
-                if resultat != "0 - 0":
+                if resultat not in ["0 - 0", None]:
                     print(f"    Résultat: {resultat} \n")
-                    print(f"Joueur exempt : {tour.joueur_exempt}\n\n")
+                
                 else:
                     print("    Résultat: En attente \n\n")
-
+            if tour.joueur_exempt:
+                print(f"Joueur exempt : {tour.joueur_exempt.id_joueur} ({tour.joueur_exempt.prenom} {tour.joueur_exempt.nom})\n\n")
 
     @staticmethod
     def prompt_score_match(match):

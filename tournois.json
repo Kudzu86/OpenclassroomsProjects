@@ -11,37 +11,13 @@
                 "matchs": [
                     {
                         "joueur1": "TR74121",
-                        "joueur2": "TR47814",
-                        "joueur1_score": 0.5,
-                        "joueur2_score": 0.5
-                    },
-                    {
-                        "joueur1": "TR78514",
                         "joueur2": "TR12154",
-                        "joueur1_score": 1.0,
-                        "joueur2_score": 0.0
-                    },
-                    {
-                        "joueur1": "TR87478",
-                        "joueur2": "TR87851",
-                        "joueur1_score": 0.0,
-                        "joueur2_score": 1.0
-                    }
-                ],
-                "joueur_exempt": null
-            },
-            {
-                "nom": "Tour 2",
-                "matchs": [
-                    {
-                        "joueur1": "TR47814",
-                        "joueur2": "TR74121",
                         "joueur1_score": 0,
                         "joueur2_score": 0
                     },
                     {
-                        "joueur1": "TR12154",
-                        "joueur2": "TR87851",
+                        "joueur1": "TR47814",
+                        "joueur2": "TR78514",
                         "joueur1_score": 0,
                         "joueur2_score": 0
                     },
@@ -50,28 +26,10 @@
                         "joueur2": "TR87478",
                         "joueur1_score": 0,
                         "joueur2_score": 0
-                    }
-                ],
-                "joueur_exempt": null
-            },
-            {
-                "nom": "Tour 3",
-                "matchs": [
-                    {
-                        "joueur1": "TR78514",
-                        "joueur2": "TR74121",
-                        "joueur1_score": 0,
-                        "joueur2_score": 0
-                    },
-                    {
-                        "joueur1": "TR12154",
-                        "joueur2": "TR87451",
-                        "joueur1_score": 0,
-                        "joueur2_score": 0
                     },
                     {
                         "joueur1": "TR87851",
-                        "joueur2": "TR87478",
+                        "joueur2": "TR45478",
                         "joueur1_score": 0,
                         "joueur2_score": 0
                     }
@@ -86,7 +44,8 @@
             "TR78514",
             "TR12154",
             "TR87478",
-            "TR87851"
+            "TR87851",
+            "TR45478"
         ],
         "joueur_exempt": null
     },
@@ -103,8 +62,8 @@
                     {
                         "joueur1": "TR47814",
                         "joueur2": "TR87451",
-                        "joueur1_score": 1.0,
-                        "joueur2_score": 0.0
+                        "joueur1_score": 0,
+                        "joueur2_score": 0
                     },
                     {
                         "joueur1": "TR78514",

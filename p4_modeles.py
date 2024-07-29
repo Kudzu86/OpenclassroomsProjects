@@ -85,16 +85,7 @@ class Tour:
         }
 
 
-    def generer_tours(self, paires, db):
 
-        for paire in paires:
-            joueur1 = next(j for j in db.joueurs if j.id_joueur == paire[0])
-            joueur2 = next(j for j in db.joueurs if j.id_joueur == paire[1])
-            if joueur1 and joueur2:
-                match = Match(joueur1, joueur2, db)
-                self.matchs.append(match)
-            else:
-                print(f"Erreur : Joueur(s) pour la paire {paire} non trouvé(s).")
 
 
     @staticmethod
@@ -172,6 +163,10 @@ class Tournoi:
             for match in tour.matchs:
                 if match.resultat == "0 - 0":
                     return False
+                if match.resultat == None:
+                    return False
+                if match.resultat == "En attente":
+                    return False
         return True
 
     def generer_un_tour(self, db):
@@ -201,30 +196,40 @@ class Tournoi:
                     joueurs.remove(joueur)
                     break
 
-        i = 0
-        while i < len(joueurs) - 1:
-            joueur1 = joueurs[i]
-            joueur2 = None
+        joueurs_disponibles = joueurs[:]
+        paires_deja_jouees_local = set(self.paires_deja_jouees)
 
-            for j in range(i + 1, len(joueurs)):
-                joueur = joueurs[j]
-                paire = (joueur1.id_joueur, joueur.id_joueur)
-                paire_inverse = (joueur.id_joueur, joueur1.id_joueur)
-                if paire not in self.paires_deja_jouees and paire_inverse not in self.paires_deja_jouees:
-                    joueur2 = joueur
-                    joueurs.pop(j)
-                    self.paires_deja_jouees.add(paire)
+        while len(joueurs_disponibles) >= 2:
+            match_ajoute = False
+            
+            for i in range(len(joueurs_disponibles)):
+                joueur1 = joueurs_disponibles[i]
+                
+                for j in range(i + 1, len(joueurs_disponibles)):
+                    joueur2 = joueurs_disponibles[j]
+                    paire = (joueur1.id_joueur, joueur2.id_joueur)
+                    paire_inverse = (joueur2.id_joueur, joueur1.id_joueur)
+                    
+                    if paire not in self.paires_deja_jouees and paire_inverse not in self.paires_deja_jouees:
+                        matchs.append(Match(joueur1, joueur2, db))
+                        self.paires_deja_jouees.add(paire)
+                        joueurs_disponibles.pop(j)
+                        joueurs_disponibles.pop(i)
+                        match_ajoute = True
+                        break
+                    
+                if match_ajoute:
                     break
-
-            if joueur2:
-                matchs.append(Match(joueur1, joueur2, db))
-            i += 1
-
-
+            
+            if not match_ajoute:
+                print("Impossible de trouver une paire valide pour les joueurs restants.")
+                break
 
         numero_tour = len(self.tours) + 1
         tour = Tour(nom=f"Tour {numero_tour}", matchs=matchs, joueur_exempt=joueur_exempt)
         self.tours.append(tour)
+
+        self.paires_deja_jouees.update(paires_deja_jouees_local)
 
         print(f"\n--- {tour.nom} ---")
         print("Matchs pour le tour :")
