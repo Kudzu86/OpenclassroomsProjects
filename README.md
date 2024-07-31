@@ -104,7 +104,7 @@ Le menu principal de l'application offre plusieurs onglets permettant différent
 1. Sélectionnez l'option "6. Générer les matchs et tours pour un tournoi" lorsque tous les participants sont inscrits.
 2. Sélectionnez le tournoi correspondant, cette action vous génèrera un seul tour.
 3. Sélectionnez l'option "7. Saisir/Modifier les résultats" pour rentrer les scores des matchs terminés.
-4. Une fois tous les résultats du premier tour rentrés, vous pourrez à nouveau générer un tour via l'option "6. Générer les matchs et tours pour un tournoi". etc.
+4. Une fois tous les résultats du premier tour rentrés, vous pourrez à nouveau générer un tour via l'option "6. Générer les matchs et tours pour un tournoi". etc.
 5. La fin d'un tournoi est actée a la fin de 4ème tour, vous ne pourrez donc pas créer de 5ème tour.
 6. Possibilité de réinitialiser la totalité des scores en fin de saison en sélectionnant l'option "8. Réinitialiser scores".
 
