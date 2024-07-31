@@ -109,6 +109,9 @@ class ApplicationController:
                 f"Date de fin (actuel: "
                 f"{tournoi.date_fin.strftime('%d/%m/%Y')}): "
             ) or tournoi.date_fin.strftime('%d/%m/%Y')
+            description = input(
+                f"Description (actuelle: {tournoi.description}): "
+            ) or tournoi.description
             tournoi.nom_tournoi = nom_tournoi
             tournoi.lieu = lieu
             tournoi.date_debut = (
@@ -117,6 +120,7 @@ class ApplicationController:
             tournoi.date_fin = (
                 datetime.strptime(date_fin, '%d/%m/%Y').date()
             )
+            tournoi.description = description
             print("Tournoi modifié avec succès!")
             self.db.save()
         else:

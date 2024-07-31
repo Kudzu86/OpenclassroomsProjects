@@ -108,7 +108,10 @@ class Tour:
 
 
 class Tournoi:
-    def __init__(self, nom_tournoi, lieu, date_debut, date_fin, id_tournoi):
+    def __init__(
+        self, nom_tournoi, lieu, date_debut, date_fin, id_tournoi,
+        description=""
+    ):
         self.nom_tournoi = nom_tournoi
         self.lieu = lieu
         if isinstance(date_debut, str):
@@ -122,7 +125,7 @@ class Tournoi:
         self.id_tournoi = id_tournoi
         self.tours = []
         self.tour_actuel = 0
-        self.description = ""
+        self.description = description
         self.participants = []
         self.db = None
         self.joueur_exempt = None
@@ -265,11 +268,15 @@ class Tournoi:
         if joueur.id_joueur not in self.participants:
             self.participants.append(joueur.id_joueur)
             self.resultats[joueur.id_joueur] = 0
-            return f"\nJoueur {joueur.prenom} {joueur.nom} \
-ajouté au tournoi avec succès !"
+            return (
+                f"\nJoueur {joueur.prenom} {joueur.nom} "
+                "ajouté au tournoi avec succès !"
+            )
         else:
-            return f"\nLe joueur {joueur.prenom} {joueur.nom} \
-est déjà inscrit à ce tournoi."
+            return (
+                f"\nLe joueur {joueur.prenom} {joueur.nom} "
+                "est déjà inscrit à ce tournoi."
+            )
 
     def to_dict(self):
         return {
@@ -281,6 +288,7 @@ est déjà inscrit à ce tournoi."
             'tours': [tour.to_dict() for tour in self.tours],
             'participants': self.participants,
             'joueur_exempt': self.joueur_exempt,
+            'description': self.description,
         }
 
     @staticmethod
@@ -294,7 +302,8 @@ est déjà inscrit à ce tournoi."
             date_fin=(
                 datetime.strptime(data['date_fin'], '%d/%m/%Y').date()
             ),
-            id_tournoi=data['id_tournoi']
+            id_tournoi=data['id_tournoi'],
+            description=data.get('description', '')
         )
 
         participants = data.get('participants', [])
@@ -375,7 +384,6 @@ class Match:
             self.joueur2.points += 0.5
 
     def format_score(self, score):
-        # Formate le score pour supprimer les décimales inutiles
         return f"{int(score)}" if score.is_integer() else f"{score:.1f}"
 
     def to_dict(self):

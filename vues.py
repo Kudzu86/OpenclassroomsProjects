@@ -125,7 +125,10 @@ class View:
             else:
                 print("Format de date incorrect. Utilisez JJ/MM/AAAA")
         id_tournoi = input("ID du tournoi: ")
-        return Tournoi(nom_tournoi, lieu, date_debut, date_fin, id_tournoi)
+        description = input("Description du tournoi: ")
+        return Tournoi(
+            nom_tournoi, lieu, date_debut, date_fin, id_tournoi, description
+        )
 
     @staticmethod
     def prompt_inscription_tournoi(tournois):
