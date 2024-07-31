@@ -2,73 +2,97 @@
 
 Cette application est une solution de gestion de tournois d'échecs. Elle est basée sur une architecture MVC (Modèle-Vue-Contrôleur) et permet de créer, gérer et suivre des tournois d'échecs via un menu principal intuitif.
 
+
+## Prérequis
+
+
+Avant de pouvoir exécuter ce projet, assurez-vous d'avoir installé Python. Vous pouvez vérifier que le logiciel est bien installé en écrivant simplement "python" dans la console ou "python --version".
+
+```
+python --version
+```
+
+
+### Installation des Dépendances
+
+
+Clonez le repository GitHub et installez les dépendances :
+
+```
+git clone https://github.com/Kudzu86/OpenclassroomsProjects/tree/p4-27/07
+cd OpenclassroomsProjects/p4-27/07
+pip install -r requirements.txt
+```
+
+
+### Exécution de l'Application
+
+
+Pour lancer l'application, exécutez le script principal :
+
+```
+python controllers.py
+```
+
+
 ## Fonctionnalités
 
 ### Menu Principal
 
 Le menu principal de l'application offre plusieurs onglets permettant différentes actions :
 
-1. **Créer un Nouveau Tournoi**
-   - Permet de créer un nouveau tournoi en spécifiant les détails tels que le nom, le lieu, la date, le nombre de tours, les joueurs participants, etc.
-
-2. **Gérer les Joueurs**
-   - Ajout de nouveaux joueurs
-   - Modification des informations des joueurs existants
-   - Consultation de la liste des joueurs
-
-3. **Démarrer un Tournoi**
-   - Permet de lancer un tournoi déjà créé
-   - Gestion automatique des rondes et appariements
-
-4. **Suivi des Tournois en Cours**
-   - Affiche les détails des tournois en cours
-   - Permet de suivre les résultats et les classements des joueurs
-
-5. **Rapports**
-   - Génération de rapports sur les tournois passés
-   - Statistiques et analyses des performances des joueurs
+- Ajouter/modifier des joueurs et des tournois à la base de données
+- Voir le classement des joueurs et les tournois de la base de données
+- Inscrire des joueurs aux tournois, générer les matchs et saisir les résultats
+- Possibilité de réinitialiser la totalité des scores en fin de saison
 
 ### Fichiers du Projet
 
-#### Contrôleurs (`p4_controllers.py`)
+#### Contrôleurs (`controllers.py`)
 - Contient la logique de gestion des interactions entre le modèle et la vue.
 - Gère les actions de l'utilisateur et met à jour les vues en conséquence.
-- Principales classes et méthodes : 
-  - `TournamentController`
-  - `PlayerController`
-  - `MenuController`
+- Classe ApplicationController
 
-#### Modèles (`p4_modeles.py`)
+#### Modèles (`modeles.py`)
 - Définit les structures de données et les opérations de manipulation des données.
 - Modélise les entités principales comme les joueurs et les tournois.
-- Principales classes et méthodes :
-  - `Tournament`
-  - `Player`
-  - `Round`
+- Principales classes :
+  - `Tournoi`
+  - `Joueur`
+  - `Tour`
   - `Match`
 
-#### Vues (`p4_vues.py`)
+#### Vues (`vues.py`)
 - Gère l'affichage et la présentation des données à l'utilisateur.
 - Fournit les interfaces utilisateur pour les différentes actions.
-- Principales classes et méthodes :
-  - `TournamentView`
-  - `PlayerView`
-  - `MenuView`
+- Classe View
 
-## Installation et Configuration
 
-### Prérequis
+### Utilisation
 
-Assurez-vous d'avoir les éléments suivants installés sur votre machine :
 
-- Python 3.x
-- `pip` (gestionnaire de paquets Python)
+#### Gestion des Joueurs
 
-### Installation des Dépendances
+1. Sélectionnez l'option "1. Ajouter/Modifier un joueur".
+2. Ajoutez ou modifiez les joueurs via les options disponibles.
+3. Sélectionnez l'option "3. Voir le classement général", pour afficher tous les joueurs de la base de données classés en fonction de leur classement général (tous les scores de tournois cumulés).
 
-Clonez le repository GitHub et installez les dépendances :
+   
+#### Gestion d'un Nouveau Tournoi
 
-```bash
-git clone https://github.com/Kudzu86/OpenclassroomsProjects/tree/p4-27/07
-cd OpenclassroomsProjects/p4-27/07
-pip install -r requirements.txt
+1. Sélectionnez l'option "2. Ajouter/Modifier un tournoi" dans le menu principal.
+2. Entrez les informations requises : nom, lieu, date, nombre de tours, etc.
+3. Vous pouvez voir la totalité des tournois de la base de données en sélectionant l'option "4. Voir les tournois".
+4. Ajoutez les joueurs au tournoi en sélectionnant l'option "5. Inscrire un joueur à un tournoi".
+
+
+#### Démarrage et Suivi des Tournois
+
+1. Sélectionnez l'option "6. Générer les matchs et tours pour un tournoi" lorsque tous les participants sont inscrits.
+2. Sélectionnez le tournoi correspondant, cette action vous génèrera un seul tour.
+3. Sélectionnez l'option "7. Saisir/Modifier les résultats" pour rentrer les scores des matchs terminés.
+4. Une fois tous les résultats du premier tour rentrés, vous pourrez à nouveau générer un tour via l'option "6. Générer les matcgs et tours pour un tournoi". etc.
+5. La fin d'un tournoi est acté a la fin de 4ème tour, vous ne pourrez donc pas créer de 5ème tour.
+6. Possibilité de réinitialiser la totalité des scores en fin de saison en sélectionnant l'option "8. Reinitialiser scores".
+
+
