@@ -1,5 +1,5 @@
-from p4_modeles import Database
-from p4_vues import View
+from modeles import Database
+from vues import View
 from datetime import datetime
 
 

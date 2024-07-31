@@ -1,5 +1,5 @@
 import re
-from p4_modeles import Joueur, Tournoi
+from modeles import Joueur, Tournoi
 from datetime import datetime
 
 
