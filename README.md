@@ -19,21 +19,37 @@ python --version
 ### Installation
 
 
-Clonez ce dépôt sur votre machine locale :
+1. Clonez ce dépôt sur votre machine locale :
 
 ```
 git clone https://github.com/Kudzu86/OpenclassroomsProjects.git
 cd OpenclassroomsProjects
 ```
 
-Activez votre environnement virtuel et installez les dépendances :
+2. Créer l'environnement virtuel nommé .venv en exécutant la commande suivante :
 
 ```
 python -m venv .venv
-source .venv/bin/activate # Sur Windows, utilisez `.venv\Scripts\activate`
-pip install -r requirements.txt
 ```
 
+3. Activez votre environnement virtuel :
+
+##Pour macOS, Linux## :
+```
+source .venv/bin/activate # Sur Windows, utilisez `.venv\Scripts\activate`
+```
+
+##Pour Windows## :
+
+```
+.venv\Scripts\activate
+```
+
+4. Installez les dépendances :
+
+```
+pip install -r requirements.txt
+```
 
 
 ### Utilisation
