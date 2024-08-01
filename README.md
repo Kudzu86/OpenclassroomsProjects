@@ -34,12 +34,12 @@ python -m venv .venv
 
 3. Activez votre environnement virtuel :
 
-##Pour macOS, Linux## :
+#### Pour macOS, Linux : ####
 ```
 source .venv/bin/activate # Sur Windows, utilisez `.venv\Scripts\activate`
 ```
 
-##Pour Windows## :
+#### Pour Windows : ####
 
 ```
 .venv\Scripts\activate
